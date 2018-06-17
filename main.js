@@ -49,7 +49,7 @@ window.onload = function() {
       });
     } else {
       console.log("notsignedin")
-      document.location.href = "signin.html";
+      document.location.href = "index.html";
     }
   });
 }
