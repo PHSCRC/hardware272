@@ -13,7 +13,8 @@ window.onload = function() {
     if (user.email == "admin@annex272.com") {
 
 
-      var part = urlParam('part')
+      var part = decodeURI(urlParam('part'))
+      console.log(part)
       console.log(user);
       var db = firebase.firestore()
       db.collection("users").get().then(function(querySnapshot) {
