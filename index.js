@@ -9,6 +9,11 @@ function makeAccount() {
     alert(errorMessage);
   // ...
   });
+  var db = firebase.firestore();
+  var blank = []
+  db.collection("users").doc(email).set({
+    partsUsing: blank
+  })
 };
 
 function signInAccount() {
