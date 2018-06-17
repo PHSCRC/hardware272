@@ -19,7 +19,7 @@ function addPart(){
   quantity = document.getElementById('quantity').value
   location = document.getElementById('location').value
 
-  if (name == "" || description == "" || resources == "" || image == "" || quantity == "" || location = ""){
+  if (name == "" || description == "" || resources == "" || image == "" || quantity == "" || location == ""){
     alert("We need the name of the part")
   } else {
     db.collection("components").doc(name).set({
