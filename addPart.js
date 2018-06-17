@@ -17,9 +17,9 @@ function addPart(){
   resources = document.getElementById('resources').value
   image = document.getElementById('image').value
   quantity = document.getElementById('quantity').value
-  location = document.getElementById('location').value
+  loc = document.getElementById('location').value
 
-  if (name == "" || description == "" || resources == "" || image == "" || quantity == "" || location == ""){
+  if (name == "" || description == "" || resources == "" || image == "" || quantity == "" || loc == ""){
     alert("We need the name of the part")
   } else {
     db.collection("components").doc(name).set({
@@ -28,7 +28,7 @@ function addPart(){
       quantity: Number(quantity),
       resources: resources,
       image: image,
-      location: location
+      location: loc
     })
     .then(function(docRef) {
         alert("Part added")
