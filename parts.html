@@ -18,22 +18,15 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="main.html">Annex@272 Hardware</a>
+      <a class="navbar-brand" href="main.html">Annex@272 Hardware Part</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="main.html">Hardware Sign-Out </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="profile.html">Your Items</a>
-          </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Hardware Requests</a>
+            <a class="nav-link" href="admin.html">Admin<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -42,29 +35,31 @@
       </div>
     </nav>
 
-    <main role="main" class="ml-sm-auto px-3">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
-        <h1 class="h2">Hardware Request</h1>
-      </div>
-      <div class="col-xs-12">
+    <ul class="list-group" id="peopleWithPart">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b>Email</b>
+        <span class="badge badge-primary badge-pill">quantity</span>
+      </li>
+    </ul>
+    <br>
+    <br>
 
-          Part name:<br>
-          <input type="text" class="form-control" id="name"><br>
-          Description:<br>
-          <input type="text" class="form-control" id="description"><br>
-          Price:<br>
-          <input type="text" class="form-control" id="price"><br>
-          Link:<br>
-          <input type="text" class="form-control" id="link"><br>
-          Why do you need this part:<br>
-          <textarea name="message" class="form-control" id="whypart" rows="10" cols="30"></textarea><br>
+    Part name:<br>
+    <input type="text" class="form-control" id="name"><br>
+    Description:<br>
+    <input type="text" class="form-control" id="description"><br>
+    Resources:<br>
+    <input type="text" class="form-control" id="resources"><br>
+    Image:<br>
+    <input type="text" class="form-control" id="image"><br>
+    Quantity:<br>
+    <input type="text" class="form-control" id="quantity"><br>
+    Location:<br>
+    <input type="text" class="form-control" id="location"><br>
 
-          <button class="btn btn-primary btn-lg btn-block" type="button" id="submitButten" onclick="submitHardwareRequest()">Submit</button>
 
-      </div>
-    </main>
-
+    <button class="btn btn-primary btn-lg btn-block" type="button" id="edtButton" onclick="editPart()">Edit</button>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -99,6 +94,6 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="request.js"></script>
+    <script src="parts.js"></script>
   </body>
 </html>

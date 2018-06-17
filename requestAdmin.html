@@ -18,7 +18,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="main.html">Annex@272 Hardware</a>
+      <a class="navbar-brand" href="main.html">Annex@272 Hardware Admin</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,14 +26,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="main.html">Hardware Sign-Out </a>
+            <a class="nav-link" href="admin.html">Parts</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="profile.html">Your Items</a>
+            <a class="nav-link" href="addPart.html">Add Part</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Hardware Requests</a>
+          <li class="nav-item ">
+            <a class="nav-link active" href="requestAdmin.html">Hardware Requests</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -42,28 +42,16 @@
       </div>
     </nav>
 
-    <main role="main" class="ml-sm-auto px-3">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-
-        <h1 class="h2">Hardware Request</h1>
-      </div>
-      <div class="col-xs-12">
-
-          Part name:<br>
-          <input type="text" class="form-control" id="name"><br>
-          Description:<br>
-          <input type="text" class="form-control" id="description"><br>
-          Price:<br>
-          <input type="text" class="form-control" id="price"><br>
-          Link:<br>
-          <input type="text" class="form-control" id="link"><br>
-          Why do you need this part:<br>
-          <textarea name="message" class="form-control" id="whypart" rows="10" cols="30"></textarea><br>
-
-          <button class="btn btn-primary btn-lg btn-block" type="button" id="submitButten" onclick="submitHardwareRequest()">Submit</button>
-
-      </div>
-    </main>
+    <ul class="list-group" id="requestList">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b>
+        Part name<br>Requesters Email<br>Description<br>Price<br>
+      </b>
+        <b><p>Why they need the part</p></b>
+        <a href="link"> Link</a>
+        <button> Delete </button>
+      </li>
+    </ul>
 
 
     <!-- Bootstrap core JavaScript
@@ -99,6 +87,6 @@
       };
       firebase.initializeApp(config);
     </script>
-    <script src="request.js"></script>
+    <script src="requestAdmin.js"></script>
   </body>
 </html>
