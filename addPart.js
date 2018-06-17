@@ -33,7 +33,7 @@ function addPart(){
     .then(function(docRef) {
         alert("Part added")
         console.log("Document written");
-        document.location.href = "admin.html";
+        document.location.href = "adminView.html";
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
